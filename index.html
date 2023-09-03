@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Creating an empty array to push the random integers into it
+        var randomArray = [];
+        // For loop to create the random integers 
+        for (var i = 0; i < 10; i++) {
+            var randomInteger = Math.floor(Math.random() * 100);
+            randomArray.push(randomInteger);
+        }
+
+        console.log("The random array = " + randomArray)
+        document.write("The random array = " + randomArray + "<br>"+ "<br>");
+
+        var x = 0;
+
+        for (var i = 0; i <= randomArray.length; i++) {
+            var y = randomArray[i];
+
+            if (y % 2 === 0) {
+                x += y
+            }
+
+        }
+        console.log("The sum of the double elements in the previous array = " + x)
+        document.write("The sum of the double elements in the previous array = " + x + "<br>"+ "<br>")
+
+        var current = 0;
+
+        for (var j = 0; j <= randomArray.length; j++) {
+            var yy = randomArray[j];
+
+            if (j < 5) {
+                current += yy
+            }
+
+        }
+        console.log("The sum of the elements that indexes less than 5 = " + current)
+        document.write("The sum of the elements that indexes less than 5 = " + current)
+
+
+    </script>
+</body>
+
+</html>
