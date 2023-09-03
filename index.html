@@ -4,48 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript Training Task4-1</title>
 </head>
 
 <body>
+
+    <h1>
+        Hello this is the JS part of the fourth task with Focal X Agency Training
+    </h1>
+
     <script>
-        //Creating an empty array to push the random integers into it
+
+        // Start of the first part a_1 (generating the array && sum the double numbers)
+
+        // Creating an empty array to push the random integers into it
         var randomArray = [];
-        // For loop to create the random integers 
         for (var i = 0; i < 10; i++) {
-            var randomInteger = Math.floor(Math.random() * 100);
+
+            // We called the math library that has the floor fun. and random fun. that we need
+            // We used the .floor function to ensure that we have a whole integer without any decimal part of the number
+            // Also we used the .random function to generate a random numbers (10 numbers according to our loop condition)
+            // The range is 0 to 10
+            var randomInteger = Math.floor(Math.random() * 10);
             randomArray.push(randomInteger);
         }
 
         console.log("The random array = " + randomArray)
-        document.write("The random array = " + randomArray + "<br>"+ "<br>");
+        document.write("The random array = " + randomArray + "<br>" + "<br>");
 
-        var x = 0;
+        // End of a_1
+
+        // Start of a_2 (sum of the double elements)
+
+        var sumOfDouble = 0;
 
         for (var i = 0; i <= randomArray.length; i++) {
             var y = randomArray[i];
 
             if (y % 2 === 0) {
-                x += y
+                sumOfDouble += y
             }
 
         }
-        console.log("The sum of the double elements in the previous array = " + x)
-        document.write("The sum of the double elements in the previous array = " + x + "<br>"+ "<br>")
+        console.log("The sum of the double elements in the previous array = " + sumOfDouble)
+        document.write("The sum of the double elements in the previous array = " + sumOfDouble + "<br>" + "<br>")
 
-        var current = 0;
+        // End of a_2
+
+        // Start of a_3 (sum of the elements that index is less than 5 )
+
+        var sumOfIndex = 0;
 
         for (var j = 0; j <= randomArray.length; j++) {
-            var yy = randomArray[j];
+            var current = randomArray[j];
 
             if (j < 5) {
-                current += yy
+                sumOfIndex += current
             }
 
         }
-        console.log("The sum of the elements that indexes less than 5 = " + current)
-        document.write("The sum of the elements that indexes less than 5 = " + current)
+        console.log("The sum of the elements that index is less than 5 = " + sumOfIndex)
+        document.write("The sum of the elements that index is less than 5 = " + sumOfIndex + "<br>" + "<br>")
 
+        // End of the a section
+
+
+        // Start b section 
+
+        // Defining the object
+        userName = {
+            name: "Amal",
+            phoneNum: 99999999,
+            age: 25,
+            email: 'amalsaimoua@gmail.com',
+        };
+
+        // Printing the whole object in the console
+        console.log(userName);
+
+        // Printing each value by its key in two ways in the console
+        console.log('Name:' + userName.name);
+        console.log('Phone number:' + userName['phoneNum']);
+        console.log('Age:' + userName.age);
+        console.log('E-mail:' + userName['email']);
+
+        // Printing the object in the web page
+        document.write("Name: " + userName.name + "<br>");
+        document.write("Phone Number: " + userName.phoneNum + "<br>");
+        document.write("Age: " + userName.age + "<br>");
+        document.write("Email: " + userName.email + "<br>");
 
     </script>
 </body>
