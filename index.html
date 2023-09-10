@@ -72,7 +72,7 @@
         // Start b section 
 
         // Defining the object
-        userName = {
+        user = {
             name: "Amal",
             phoneNum: 99999999,
             age: 25,
@@ -80,19 +80,23 @@
         };
 
         // Printing the whole object in the console
-        console.log(userName);
+        console.log(user);
+
+        // Printing the whole object in the HTML page
+        document.write("The whole object: " + user + "<br>" + "<br>")
+
 
         // Printing each value by its key in two ways in the console
-        console.log('Name:' + userName.name);
-        console.log('Phone number:' + userName['phoneNum']);
-        console.log('Age:' + userName.age);
-        console.log('E-mail:' + userName['email']);
+        console.log('Name:' + user.name);
+        console.log('Phone number:' + user['phoneNum']);
+        console.log('Age:' + user.age);
+        console.log('E-mail:' + user['email']);
 
         // Printing the object in the web page
-        document.write("Name: " + userName.name + "<br>");
-        document.write("Phone Number: " + userName.phoneNum + "<br>");
-        document.write("Age: " + userName.age + "<br>");
-        document.write("Email: " + userName.email + "<br>");
+        document.write("Name: " + user.name + "<br>");
+        document.write("Phone Number: " + user.phoneNum + "<br>");
+        document.write("Age: " + user.age + "<br>");
+        document.write("Email: " + user.email + "<br>");
 
     </script>
 </body>
